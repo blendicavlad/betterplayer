@@ -126,7 +126,10 @@ class _BetterPlayerCupertinoControlsState
       child: AbsorbPointer(
           absorbing: controlsNotVisible,
           child:
-              isFullScreen ? SafeArea(child: controlsColumn) : controlsColumn),
+              Padding(
+                padding: const EdgeInsets.all(6.0),
+                child: controlsColumn,
+              )),
     );
   }
 
