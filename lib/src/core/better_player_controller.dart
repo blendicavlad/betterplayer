@@ -259,8 +259,9 @@ class BetterPlayerController {
     if (videoPlayerController == null) {
       videoPlayerController = VideoPlayerController(
           bufferingConfiguration:
-              betterPlayerDataSource.bufferingConfiguration);
+              betterPlayerDataSource.bufferingConfiguration,);
       videoPlayerController?.addListener(_onVideoPlayerChanged);
+      videoPlayerController?.setMixWithOthers(betterPlayerConfiguration.mixWithOthers);
     }
 
     ///Clear asms tracks

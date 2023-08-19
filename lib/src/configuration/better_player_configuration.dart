@@ -15,6 +15,8 @@ class BetterPlayerConfiguration {
   /// Whether or not the video should loop
   final bool looping;
 
+  final bool mixWithOthers;
+
   /// When the video playback runs  into an error, you can build a custom
   /// error message.
   final Widget Function(BuildContext context, String? errorMessage)?
@@ -124,6 +126,7 @@ class BetterPlayerConfiguration {
   const BetterPlayerConfiguration({
     this.aspectRatio,
     this.autoPlay = false,
+    this.mixWithOthers = false,
     this.startAt,
     this.looping = false,
     this.fullScreenByDefault = false,
@@ -165,6 +168,7 @@ class BetterPlayerConfiguration {
   BetterPlayerConfiguration copyWith({
     double? aspectRatio,
     bool? autoPlay,
+    bool? mixWithOthers,
     Duration? startAt,
     bool? looping,
     bool? fullScreenByDefault,
@@ -197,6 +201,7 @@ class BetterPlayerConfiguration {
     return BetterPlayerConfiguration(
       aspectRatio: aspectRatio ?? this.aspectRatio,
       autoPlay: autoPlay ?? this.autoPlay,
+      mixWithOthers: mixWithOthers ?? this.mixWithOthers,
       startAt: startAt ?? this.startAt,
       looping: looping ?? this.looping,
       fullScreenByDefault: fullScreenByDefault ?? this.fullScreenByDefault,
