@@ -622,7 +622,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   }
 
   void setMixWithOthers(bool mixWithOthers) {
-    _videoPlayerPlatform.setMixWithOthers(_textureId, mixWithOthers);
+    _videoPlayerPlatform.setMixWithOthers(_textureId ?? 0, mixWithOthers);
   }
 
   static Future clearCache() async {
